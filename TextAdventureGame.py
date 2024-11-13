@@ -8,7 +8,7 @@ intro_art = r"""
 """
 print(intro_art)
 
-While True:
+while True:
     user_name = input("Hello, what is your name? ")
     print(f"Well, {user_name}, welcome to Summit. Let's see if you can reach the top...")
     print("You have decided to attempt the climb of Mt. Sammy which has been known near impossible;\n"
@@ -27,8 +27,7 @@ While True:
     elif user_choice1 == 'b':
         print("Great choice! The picaxe has multiple uses and will be very helpful for your adventure.")
 
-    print("Now that you have chosen your tool, you make sure you have your backpack,\n"
-          "and you're ready to go. ")
+    print("Now that you have chosen your tool, you make sure you're ready to go. ")
     print("As you start at the bottom of the mountain, you encounter another decision to be made.\n"
           "There are two paths, no signs telling you which one to take.")
     print("a) Left path")
