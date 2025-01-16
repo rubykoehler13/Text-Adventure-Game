@@ -93,7 +93,8 @@ def main():
                         print("Please input a valid answer.")
                         continue
         if blah == 2:
-
+            print("You've started your climb. You suddenly get very hungry. You remember that you have some small snacks in your backpack,\n"
+                  "so you ")
 
 
     elif user_choice2 == 'b':
