@@ -24,7 +24,7 @@ print("You may only bring one; this is your first decision to make.")
 print("a) Ski pole")
 print("b) Picaxe")
 
-player_info = [user_name]
+player_info = [user_name.title()]
 while True:
     user_choice1 = input(f"{player_info[0]}, which do you choose? (a/b): ").lower()
     if user_choice1 == 'a':
@@ -68,13 +68,15 @@ if blah == 1:
         print()
         print("a) Accept the lunch and walk inside")
         print("b) Decline the lunch but say thank you for the offer")
-        user_choice4 = input("Which do you choose? (a/b): ").lower()
+        user_choice4 = input(f"{player_info[0]}, which do you choose? (a/b): ").lower()
         while True:
             if user_choice4 == "a":
-                print("The man smiles and makes room for you to come inside.")
+                print("The man smiles and you go eat lunch with him. He's a very nice man, \n"
+                      "and you have a great meal! Once you're done eating, you show him your appreciation, \n"
+                      "and go continue your climb.")
                 break
             elif user_choice4 == "b":
-                print("The man seems to be hurt, but tries not to show it. He closes the door.")
+                print("The man understands, and he closes the door. You continue your adventure!")
                 break
             else:
                 print("Please input a valid answer.")
@@ -106,8 +108,8 @@ elif blah == 2:
               "You look around, and hear it again from a nearby cave. Should you go investigate or leave it alone?")
     print()
     print("a) Investigate the sound")
-    print("b) Leave it alone and hope to not encounter the animal in the future")
-    user_choice_6 = input("Which do you choose? (a/b): ").lower()
+    print("b) Leave it alone and hope to not encounter the supposed animal in the future")
+    user_choice_6 = input(f"{player_info[0]}, which do you choose? (a/b): ").lower()
     print()
     while True:
         if user_choice_6 == "a":
@@ -154,7 +156,7 @@ while True:
             "Your trip did not wake up the lion! As quietly as possible, you let out a sigh and remove your hand. \n"
             "Your heart rate drops, and you continue walking up. You're just feet from the summit!\n"
             "It has gotten significantly harder to breathe as you've climbed, but never as hard as it is now, but it seems...\n"
-            "YOU MADE IT TO THE SUMMIT!!!!! Congratulations, you are one of very few to accomplish this climb!")
+            f"{player_info[0].upper()}, YOU MADE IT TO THE SUMMIT!!!!! Congratulations, you are one of very few to accomplish this climb!")
         print("You catch your breath - as best you can - and look around; it's the most beautiful scenery you've ever seen.\n"
             "Now the question is can you get back down...? \n"
             "Good luck;)")
@@ -163,7 +165,7 @@ while True:
         print("Very slowly, you turn your head to the lion to see if it has woken up... \n"
               "Unfortunately, your trip has awoken the lion. \n"
               "Now it's the one slowly turning its head to you, and as it jumps at you, that's the last thing you see. \n"
-              "Unfortunately, you did not reach the summit, and have become one of many who have failed this climb. \n"
+              f"Unfortunately {player_info[0]}, you did not reach the summit, and have become one of many who have failed this climb. \n"
               "Better luck next time.")
         break
 print()
