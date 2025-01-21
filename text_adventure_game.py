@@ -10,6 +10,7 @@ intro_art = r"""
 print(intro_art)
 
 user_name = input("Hello, what is your name? ").title()
+print()
 print(f"Well, {user_name}, welcome to Summit. Let's see if you can reach the top...")
 print("You have decided to attempt the climb of Mt. Shadowspire which has been known near impossible;\n"
               "only a few people have successfully completed the summit, will you be another?")
@@ -23,7 +24,7 @@ print("You may only bring one; this is your first decision to make.")
 print("a) Ski pole")
 print("b) Picaxe")
 
-player_info = [user_name, 100]
+player_info = [user_name]
 while True:
     user_choice1 = input(f"{player_info[0]}, which do you choose? (a/b): ").lower()
     if user_choice1 == 'a':
@@ -32,94 +33,93 @@ while True:
     elif user_choice1 == 'b':
         print("Great choice! The picaxe has multiple uses and might be helpful for your adventure.")
         break
-
+    else:
+        print("Please input a valid answer.")
+        continue
+print()
 print("Now that you have chosen your tool, you make sure you're ready to go. ")
 print("As you start at the bottom of the mountain, you encounter another decision to be made.\n"
-                  "There are two paths, no signs telling you which one to take.")
+      "There are two paths, no signs telling you which one to take.")
+print()
 print("a) Left path")
 print("b) Right path")
-user_choice2 = input("Which do you choose? (a/b): ").lower()
+print()
 blah = random.randint(1,2)
-if user_choice2 == 'a':
-    print("Awesome, you have chosen the left path! You can continue.")
-    if blah == 1:
-        print("Now, you start your climb. After you've walked for a couple\n"
+print("The game has decided to choose your destiny for you!")
+print()
+if blah == 1:
+    print("It has decided you take the left path!")
+    print()
+    print("Now, you start your climb. After you've walked for a couple\n"
                   "of minutes, you're already getting tired and want to sit down\n"
                   "even just for a second. You keep walking, take a turn and suddenly\n"
                   "see a very small house. You walk closer to it, do you knock on the door\n"
                   "or leave it alone?")
-        print("a) Knock on the door")
-        print("b) Leave it alone and keep climbing")
-        user_choice3 = input("Which do you choose? (a/b): ").lower()
-        if user_choice3 == "a":
-            print("You have chosen to knock on the door! You wait a second,\n"
+    print("a) Knock on the door")
+    print("b) Leave it alone and keep climbing")
+    user_choice3 = input("Which do you choose? (a/b): ").lower()
+    if user_choice3 == "a":
+        print("You have chosen to knock on the door! You wait a second,\n"
                       "and hear creaking within the house. A man slowly opens the door\n"
                       "and given that rarely anyone comes up to him or his house, \n"
                       "he acts a little hesitant. But he sees that you're tired and must be freezing. \n"
                       "He offers you to come inside and have a quick lunch that he's made.\n"
                       "Do you accept?")
-            print("a) Accept the lunch and walk inside")
-            print("b) Decline the lunch but say thank you for the offer")
-            user_choice4 = input("Which do you choose? (a/b): ")
-            while True:
-                if user_choice4 == "a":
-                    print("The man smiles and makes room for you to come inside.")
-                elif user_choice4 == "b":
-                    print("The man seems to be hurt, but tries not to show it. He closes the door.")
-                else:
-                    print("Please input a valid answer.")
-                    continue
-        if user_choice3 == "b":
-            print("You have chosen to leave the house alone and keep climbing the mountain. \n"
-                      "Just maybe a minute later after walking past the house, you trip a little bit.\n"
-                      "You're just so tired and really need to sit down at this point. You see a great little spot just up ahead.\n"
-                      "You finally sit down and take off your backpack. You're able to drink water or eat a snack.")
-            print("a) Drink water")
-            print("b) Eat a snack")
-            user_choice_4 = input("Which do you choose? (a/b): ").lower()
-            while True:
-                if user_choice_4 == "a":
-                    print("You feel a little bit better, and after sitting for a second more, you start back on your climb.")
-                elif user_choice_4 == "b":
-                    print("You feel a little bit better, and after sitting for a second more, you start back on your climb.")
-                else:
-                    print("Please input a valid answer.")
-                    continue
-    if blah == 2:
-        print("You've started your climb. You suddenly get very hungry. You remember that you have a small snack in your backpack,\n"
-                  "so you find a place to set your backpack down and grab out your snack. You can either eat the trail mix you brought,\n"
-              "or hunt for some fish in the small nearby lake! ")
-        print("a) Trail mix")
-        print("b) Fish")
-        user_choice_5 = input("Which do you choose? (a/b): ").lower()
+        print()
+        print("a) Accept the lunch and walk inside")
+        print("b) Decline the lunch but say thank you for the offer")
+        user_choice4 = input("Which do you choose? (a/b): ").lower()
         while True:
-            if user_choice_5 == "a":
-                print("Great! You can continue your climb after finishing eating.")
-            elif user_choice_5 == "b":
-                print("You try your best to fish but can't catch anything, maybe pick the trail mix...")
-                continue
+            if user_choice4 == "a":
+                print("The man smiles and makes room for you to come inside.")
+                break
+            elif user_choice4 == "b":
+                print("The man seems to be hurt, but tries not to show it. He closes the door.")
+                break
             else:
                 print("Please input a valid answer.")
                 continue
-elif user_choice2 == 'b':
-    print("Great, you have chosen the right path! You may continue.")
-    if blah == 1:
-        print("Now, you start your climb. You've walked a decent amount, and are about 1/2 of the way up the mountain!\n"
-              "Although suddenly, you hear a sound that definitely comes from an animal...\n"
-              "You look around, and hear it again from a nearby cave. Should you go investigate or leave it alone?")
-        print("a) Investigate the sound")
-        print("b) Leave it alone and hope to not encounter the animal in the future")
-        user_choice_6 = input("Which do you choose? (a/b): ").lower()
+    if user_choice3 == "b":
+        print("You have chosen to leave the house alone and keep climbing the mountain. \n"
+                      "Just maybe a minute later after walking past the house, you trip a little bit.\n"
+                      "You're just so tired and really need to sit down at this point. You see a great little spot just up ahead.\n"
+                      "You finally sit down and take off your backpack. You're able to drink water or eat a snack.")
+        print()
+        print("a) Drink water")
+        print("b) Eat a snack")
+        user_choice_4 = input("Which do you choose? (a/b): ").lower()
         while True:
-            if user_choice_6 == "a":
-                print("You decided to investigate the sound. You start to walk towards the cave and hear the sound again, \n"
+            if user_choice_4 == "a":
+                print("You feel a little bit better, and after sitting for a second more, you start back on your climb.")
+                break
+            elif user_choice_4 == "b":
+                print("You feel a little bit better, and after sitting for a second more, you start back on your climb.")
+                break
+            else:
+                print("Please input a valid answer.")
+                continue
+elif blah == 2:
+    print("It has decided you will take the right path!")
+    print()
+    print("Now, you start your climb. You've walked a decent amount, and are about 1/2 of the way up the mountain!\n"
+              "Although suddenly, you hear a sound that you believe comes from an animal...\n"
+              "You look around, and hear it again from a nearby cave. Should you go investigate or leave it alone?")
+    print()
+    print("a) Investigate the sound")
+    print("b) Leave it alone and hope to not encounter the animal in the future")
+    user_choice_6 = input("Which do you choose? (a/b): ").lower()
+    print()
+    while True:
+        if user_choice_6 == "a":
+            print("You decided to investigate the sound. You start to walk towards the cave and hear the sound again, \n"
                       "but this time it scares you a lot. Again, you have no idea what animal this is, if it even is one.\n"
                       "Do you still wish to continue investigating?")
-                print("a) Keep investigating!")
-                print("b) Turn around")
-                user_choice_7 = input("Which do you choose (a/b): ").lower()
-                if user_choice_7 == "a":
-                    print("Perfect, you decided to continue searching for what made the sound. \n"
+            print()
+            print("a) Keep investigating!")
+            print("b) Turn around")
+            user_choice_7 = input("Which do you choose (a/b): ").lower()
+            if user_choice_7 == "a":
+                print("Perfect, you decided to continue searching for what made the sound. \n"
                           "You get to the mouth of the cave and see something hiding in the dark. It's quite small, \n"
                           "and continues to make a sound, except this time it sounds like whatever is making it, is in pain. \n"
                           "You walk up to it, getting closer and closer, as your heart beats faster and faster. \n"
@@ -129,11 +129,43 @@ elif user_choice2 == 'b':
                           "but let's you do it. After not too long, you've taken the twig out, and the dog jumps up to give you lots of kisses! \n"
                           "You think for a second about what you're next plan of action is. You decide to help him up but not take him with you on your \n"
                           "continuing adventure to the summit. You give the dog a very small amount of water you have, and walk back out of the cave.")
-                elif user_choice_7 == "b":
-                    print("Interesting choice. You turn around and continue your climb as the sound starts to fade away until you can't hear it at all anymore.")
-                else:
-                    print("Please input a valid answer.")
-                    continue
-            elif user_choice_6 == "b":
-                print("You chose to leave the supposed animal alone, so you continue your climb.")
-    elif blah == 2:
+                break
+            elif user_choice_7 == "b":
+                print("Interesting choice. You turn around and continue your climb as the sound starts to fade away until you can't hear it at all anymore.")
+                break
+            else:
+                print("Please input a valid answer.")
+                continue
+        elif user_choice_6 == "b":
+            print("You chose to leave the supposed animal alone, so you continue your climb.")
+    print()
+print("You're getting very close to the summit... unusual.\n"
+      "There's one last challenge you encounter. There is a mountain lion that lives about 50 meters from the summit itself, \n"
+      "and this is where many people have failed. There's a 50/50 chance you survive and get around the lion. Again, this is up to fate.")
+print("You walk a couple feet more, and finally see the lion. The question is do you wake it up, and that be the last thing you do, \n"
+      "or do you get around it without disturbing its slumber and make it to the summit!? We shall see....")
+print("You walk closer and closer, trying to be as quiet as possible. You end up having to walk within feet of the lion! Suddenly you trip! \n"
+      "You put your hand over your mouth as to not let out a scream.")
+print()
+last_challenge = random.randint(1, 2)
+while True:
+    if last_challenge == 1:
+        print("Very slowly, you turn your head to the lion to see if it has woken up... \n"
+            "Your trip did not wake up the lion! As quietly as possible, you let out a sigh and remove your hand. \n"
+            "Your heart rate drops, and you continue walking up. You're just feet from the summit!\n"
+            "It has gotten significantly harder to breathe as you've climbed, but never as hard as it is now, but it seems...\n"
+            "YOU MADE IT TO THE SUMMIT!!!!! Congratulations, you are one of very few to accomplish this climb!")
+        print("You catch your breath - as best you can - and look around; it's the most beautiful scenery you've ever seen.\n"
+            "Now the question is can you get back down...? \n"
+            "Good luck;)")
+        break
+    elif last_challenge == 2:
+        print("Very slowly, you turn your head to the lion to see if it has woken up... \n"
+              "Unfortunately, your trip has awoken the lion. \n"
+              "Now it's the one slowly turning its head to you, and as it jumps at you, that's the last thing you see. \n"
+              "Unfortunately, you did not reach the summit, and have become one of many who have failed this climb. \n"
+              "Better luck next time.")
+        break
+print()
+
+print("THE END")
